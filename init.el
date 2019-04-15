@@ -31,6 +31,7 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
+     yaml
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
@@ -39,7 +40,7 @@ values."
      ivy   ;; swiper research
      helm
      auto-completion
-     better-defaults
+     (better-defaults :variables better-defaults-move-to-end-of-code-first t)
      emacs-lisp
      git
      markdown
@@ -314,6 +315,8 @@ This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   (setcdr evil-insert-state-map nil)
+  (setq powerline-default-separator 'arrow)
+  (setq ns-use-srgb-colorspace nil)
   (define-key evil-insert-state-map [escape] 'evil-normal-state)
   )
 
