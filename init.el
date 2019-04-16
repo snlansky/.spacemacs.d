@@ -39,6 +39,7 @@ This function should only modify configuration layer settings."
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
      ;; `M-m f e R' (Emacs style) to install them.
      ;; ----------------------------------------------------------------
+     go
      ivy   ;; swiper research
      helm
      auto-completion
@@ -51,9 +52,9 @@ This function should only modify configuration layer settings."
      multiple-cursors
      treemacs
      org
-      (shell :variables
-             shell-default-height 30
-             shell-default-position 'bottom)
+     (shell :variables
+            shell-default-height 30
+            shell-default-position 'bottom)
      spell-checking
      syntax-checking
      ;; version-control
