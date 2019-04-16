@@ -41,7 +41,7 @@ This function should only modify configuration layer settings."
      ;; ----------------------------------------------------------------
      go
      ivy   ;; swiper research
-     helm
+     ;; helm 如果开启helm将无法使用ivy的swiper
      auto-completion
      (better-defaults :variables
                       better-defaults-move-to-end-of-code-first t)
