@@ -1,2 +1,3 @@
-;; 开启行号显示
-;;(global-linum-mode t)
+(add-hook 'go-mode-hook (lambda()
+                          (setq indent-tabs-mode 1)
+                          (setq tab-width 4)))
