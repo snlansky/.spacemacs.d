@@ -30,7 +30,7 @@
 ;;; Code:
 
 (defconst snlan-packages
-  '()
+  '(company)
   "The list of Lisp packages required by the snlan layer.
 
 Each entry is either:
@@ -57,5 +57,7 @@ Each entry is either:
 
       - A list beginning with the symbol `recipe' is a melpa
         recipe.  See: https://github.com/milkypostman/melpa#recipe-format")
+(defun snlan/post-init-company()
+  (setq company-minimum-prefix-length 1))
 
 ;;; packages.el ends here
