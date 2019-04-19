@@ -25,3 +25,11 @@
     (ivy-read "directories:" collection
               :action 'my-find-file-in-git-repo
               :caller 'counsel-find-file-recent-directory)))
+
+(defun snlan/load-my-layout ()
+  (interactive)
+  (persp-load-state-from-file (concat persp-save-dir "mylayout")))
+
+(defun snlan/save-my-layout ()
+  (interactive)
+  (persp-save-state-to-file (concat persp-save-dir "mylayout")))

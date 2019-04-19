@@ -54,6 +54,8 @@ This function should only modify configuration layer settings."
      multiple-cursors
      treemacs
      org
+     (spacemacs-layouts :variables layouts-enable-autosave nil
+                        layouts-autosave-delay 300)
      (shell :variables
             shell-default-height 30
             shell-default-position 'bottom)
