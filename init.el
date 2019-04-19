@@ -60,6 +60,8 @@ This function should only modify configuration layer settings."
      spell-checking
      syntax-checking
      ;; version-control
+     yaml
+     fasd
      snlan
      )
 
