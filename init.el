@@ -41,7 +41,10 @@ This function should only modify configuration layer settings."
      ;; ----------------------------------------------------------------
      rust
      javascript
-     go
+     (go :variables
+         go-tab-width 4
+         go-use-gometalinter t
+         go-fmt-command "goimport")
      ivy   ;; swiper research
      ;; helm 如果开启helm将无法使用ivy的swiper
      auto-completion
