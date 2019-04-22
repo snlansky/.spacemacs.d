@@ -33,3 +33,16 @@
 (defun snlan/save-my-layout ()
   (interactive)
   (persp-save-state-to-file (concat persp-save-dir "mylayout")))
+
+(defun snlan/git-project-root ()
+  "Return the project root for current buffer."
+  (let ((directory default-directory))
+    (locate-dominating-file directory ".git")))
+
+(defun snlan/open-file-with-projectile-or-counsel-git ()
+  (interactive)
+  (if (snlan/git-project-root)
+      (counsel-git)
+    (if (projectile-project-p)
+        (projectile-find-file)
+      (counsel-file-jump))))

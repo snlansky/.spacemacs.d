@@ -66,4 +66,24 @@ Each entry is either:
   (use-package go-flymake
     :init))
 
+(defun snlan-misc/post-init-projectile ()
+  (progn
+    (with-eval-after-load 'projectile
+      (progn
+        (setq projectile-completion-system 'ivy)))
+    (spacemacs/set-leader-keys "pf" 'snlan/open-file-with-projectile-or-counsel-git)))
+
+(defun snlan-better-defaults/init-dired-mode ()
+  (use-package dired-mode
+    :defer t
+    :init
+    (progn
+      ;; FIXME: evilify dired mode will lead to startup warnings
+      (evilified-state-evilify-map dired-mode-map
+        :mode dired-mode
+        :bindings
+        "f" 'snlan/open-file-with-projectile-or-counsel-git
+        )
+      )))
+
 ;;; packages.el ends here
