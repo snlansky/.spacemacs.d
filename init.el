@@ -68,6 +68,7 @@ This function should only modify configuration layer settings."
      yaml
      fasd
      snlan
+     rust
      )
 
    ;; List of additional packages that will be installed without being
