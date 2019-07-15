@@ -30,9 +30,7 @@
 ;;; Code:
 
 (defconst snlan-packages
-  '(company
-    (go-flymake :location (recipe :fetcher github :repo "dougm/goflymake"))
-    )
+  '()
   "The list of Lisp packages required by the snlan layer.
 
 Each entry is either:
@@ -61,10 +59,6 @@ Each entry is either:
         recipe.  See: https://github.com/milkypostman/melpa#recipe-format")
 (defun snlan/post-init-company()
   (setq company-minimum-prefix-length 1))
-
-(defun snlan/init-go-flymake()
-  (use-package go-flymake
-    :init))
 
 (defun snlan-misc/post-init-projectile ()
   (progn
