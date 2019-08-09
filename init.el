@@ -69,6 +69,7 @@ This function should only modify configuration layer settings."
      fasd
      snlan
      rust
+     (c-c++ :variables c-c++-enable-clang-support t)
      )
 
    ;; List of additional packages that will be installed without being
