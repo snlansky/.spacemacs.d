@@ -47,7 +47,7 @@ This function should only modify configuration layer settings."
          go-fmt-command "goimport")
      ivy   ;; swiper research
      ;; helm 如果开启helm将无法使用ivy的swiper
-     auto-completion
+     ;; auto-completion
      (better-defaults :variables
                       better-defaults-move-to-end-of-code-first t)
      emacs-lisp
@@ -66,10 +66,10 @@ This function should only modify configuration layer settings."
      syntax-checking
      ;; version-control
      yaml
-     fasd
+     ;; fasd
      snlan
      rust
-     (c-c++ :variables c-c++-enable-clang-support t)
+     ;; (c-c++ :variables c-c++-enable-clang-support t)
      )
 
    ;; List of additional packages that will be installed without being
